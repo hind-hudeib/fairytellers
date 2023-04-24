@@ -1,0 +1,102 @@
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Noto Sans JP', sans-serif;
+
+
+}
+
+.card {
+    background-color: rgb(253, 253, 253);
+    color: #2c0b32;
+    border: none;
+}
+
+h1{
+    color: #9900EF;
+    font-size: 6rem;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+
+}
+.btn-link {
+    color: #44006b;
+}
+
+.login-btn {
+    font-family: 'Noto Sans JP', sans-serif;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .4s;
+}
+
+.login-btn span:last-child {
+    display: none;
+}
+
+.login-btn:hover {
+    border: 2px dashed #9900EF;
+    background-color: #fff;
+    color: #9900EF;
+    transition: .4s;
+
+}
+
+.login-btn:active {
+    background-color: #9900EF;
+}
+
+:root {
+    --background: rgb(72, 0, 85);
+    --primary: #ac88d5;
+    --secondary: #a55df8;
+    --third: #e27fe2;
+}
+
+
+
+#radius-shape-1 {
+    height: 220px;
+    width: 220px;
+    top: -60px;
+    left: -130px;
+    background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    height: 400px;
+    width: 400px;
+    z-index: -2;
+}
+
+#radius-shape-2 {
+    border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+    bottom: -60px;
+    right: -110px;
+    width: 300px;
+    background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+    animation: morph 4s ease-in-out infinite;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    height: 400px;
+    transition: all 1s ease-in-out;
+    width: 400px;
+    z-index: -2;
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        background: linear-gradient(45deg, var(--third) 0%, var(--secondary) 100%);
+    }
+
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+    }
+}
+
+
+p a{
+    color: #9d1aa4;
+}
