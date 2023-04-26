@@ -1,6 +1,28 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+
+}
+
+.navbar{
+    background-color: #7c2d9940;
+    z-index: 4;
+    color: #e2d9d9;
+
+}
+
+
 .navLogo {
     font-family: 'Noto Sans JP', sans-serif;
-    color: #9900EF;
+    color: #491467;
     font-weight: 600;
 }
 
@@ -10,6 +32,7 @@
     color: #9900EF;
     font-family: 'Noto Sans JP', sans-serif;
 }
+
 
 
 .nav-link::after {
@@ -58,12 +81,14 @@
 
 
 #landing {
-    background: rgb(255, 255, 255);
+    background: rgb(218, 149, 246);
 }
-
+.bg-image img{
+    opacity: 0.5;
+}
 h1 {
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    color: #9900EF;
+    color: #ffffff;
     font-size: 4rem;
     overflow: hidden;
     transform: translateY(-50%);
@@ -71,10 +96,15 @@ h1 {
     white-space: nowrap;
 }
 
-
+.websiteName{
+    color: #2a0a38;
+}
+.subTittle{
+    color: #fff;
+}
 /* Animation */
 .anim-typewriter {
-    animation: typewriter 4s steps(44) 1s 1 normal both,
+    animation: typewriter 3s steps(44) 1s 1 normal both,
         blinkTextCursor 500ms steps(44) infinite normal;
 }
 
@@ -84,7 +114,7 @@ h1 {
     }
 
     to {
-        width: 24em;
+        width: 11em;
     }
 }
 
@@ -161,6 +191,60 @@ i {
 }
 
 
+#quoteSection {
+    height: 40rem;
+}
+
+/* ----- */
+#demo {
+    background: linear-gradient(112deg, #ffffff 50%, rgb(240, 215, 250) 50%);
+    max-width: 900px;
+    margin: auto;
+}
+
+.carousel-caption {
+    position: initial;
+    z-index: 10;
+    padding: 5rem 8rem;
+    color: rgba(78, 77, 77, 0.856);
+    text-align: center;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+.carouselControler i {
+    background-color: rgb(220, 200, 233);
+    padding: 1.4rem;
+}
+
+.carousel-caption img {
+    width: 6rem;
+    border-radius: 5rem;
+    margin-top: 2rem;
+}
+
+#image-caption {
+    font-style: normal;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.carousel-control-prev {
+    justify-content: flex-start;
+}
+
+.carousel-control-next {
+    justify-content: flex-end;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    transition: none;
+    opacity: unset;
+}
+
 #partnersSection {
     background-color: #d895ff;
     margin-top: 10rem;
@@ -235,4 +319,118 @@ i {
 
 .darkBgTitel{
     color: #ffff;
+}
+
+
+.fancy {
+    background-color: transparent;
+    border: 2px solid #7c2d99;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    outline: none;
+    overflow: visible;
+    padding: 1.25em 2em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 13px;
+   }
+   
+   .fancy::before {
+    content: " ";
+    width: 1.5625rem;
+    height: 2px;
+    background: rgb(203, 160, 210);
+    left: 1.5em;
+    position: absolute;
+    transform: translateY(-50%);
+    transform-origin: center;
+    transition: background 0.3s linear, width 0.3s linear;
+   }
+   
+   .fancy .text {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    padding-left: 2em;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+   }
+   
+   .fancy .top-key {
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+   }
+   
+   .fancy .bottom-key-1 {
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+   }
+   
+   .fancy .bottom-key-2 {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+   }
+   
+   .fancy:hover {
+    color: white;
+    background: rgb(91, 34, 137);
+   }
+   
+   .fancy:hover::before {
+    width: 0.9375rem;
+    background: white;
+   }
+   
+   .fancy:hover .text {
+    color: white;
+    padding-left: 1.5em;
+   }
+   
+   .fancy:hover .top-key {
+    left: -2px;
+    width: 0px;
+   }
+   
+   .fancy:hover .bottom-key-1,
+    .fancy:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+   }
+
+
+@keyframes rotBGimg {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }

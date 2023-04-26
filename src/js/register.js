@@ -1,6 +1,3 @@
-$(document).ready(function(){
-    $("#myModal").modal('show');
-});
 configObj = { "buttonD": "M11.384 13.333h9.232c.638 0 .958.68.505 1.079l-4.613 4.07c-.28.246-.736.246-1.016 0l-4.613-4.07c-.453-.399-.133-1.079.505-1.079z", "buttonT": "translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)", "shadowSize": "none", "roundnessSize": "999px", "buttonDToBottom": "32px", "buttonDToRight": "24px", "selectedBackgroundColor": "#7036ab", "selectedIconColor": "#ffffff", "buttonWidth": "48px", "buttonHeight": "48px", "svgWidth": "40px", "svgHeight": "40px" };
 function createButton(obj, pageSimulator) {
     const body = document.querySelector("body");
@@ -41,6 +38,8 @@ function createButton(obj, pageSimulator) {
         };
     }
 };
+
+
 document.addEventListener("DOMContentLoaded", function () { createButton(configObj, null); });
 
 
