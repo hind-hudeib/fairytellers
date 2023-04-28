@@ -12,7 +12,7 @@ body {
 }
 
 h1{
-    color: #9900EF;
+    color: rgb(218, 149, 246);
     font-size: 6rem;
     font-family: 'M PLUS Rounded 1c', sans-serif;
 
@@ -45,10 +45,10 @@ h1{
 }
 
 :root {
-    --background: rgb(72, 0, 85);
-    --primary: #ac88d5;
-    --secondary: #a55df8;
-    --third: #e27fe2;
+    --background: rgb(218, 149, 246);
+    --primary: rgb(206, 118, 241);
+    --secondary: rgb(214, 130, 248);
+    --third: rgb(223, 173, 244);
 }
 
 

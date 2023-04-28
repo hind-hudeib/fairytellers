@@ -39,16 +39,12 @@
           <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
 
           <div class="card ">
-            <div class="card-body px-4 py-5 px-md-5">
-              <div
-                  id="emailPassError"
-                  style="display: none; color: red"
-                  class="container text-center"
-                >
-                  Email or password is not correct
-                </div>
+            <div class="card-body px-4 py-5 px-md-5" id="positionError">
+              <div id="emailPassError" style="display: none; color: red" class="container text-center">
+                Email or password is not correct
+              </div>
 
-              <form>
+              <form id="form">
                 <!-- Email input -->
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example3">Email address</label>
@@ -58,7 +54,8 @@
                 <!-- Password input -->
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example4">Password</label>
-                  <input type="password" name="password" id="form3Example4" class="form-control" placeholder="password" />
+                  <input type="password" name="password" id="form3Example4" class="form-control"
+                    placeholder="password"  autocomplete="on"  />
                 </div>
 
                 <!-- Checkbox -->
@@ -71,8 +68,11 @@
 
                 <!-- Submit button -->
                 <div class="text-center">
+                  <a href="/src/html/registerPage.html">
                   <button type="submit" class="btn rounded login-btn" data-toggle="modal"
-                    data-target="#loginModel">Login<span></span></button>
+                    data-target="#loginModel">Login
+                  </button>
+                </a>
                 </div>
 
 
@@ -88,8 +88,8 @@
                   <p>Don't have an account? <a href="../html/signup.html">Sign up</a> </p>
                 </div>
 
-               
-                 
+
+
               </form>
             </div>
           </div>

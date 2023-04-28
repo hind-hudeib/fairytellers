@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fairytellers</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-TlKdJ8zvU6D+3Kwqx04dq2hWujNlxrofEusKMc+9sb24R/ovrqOeAtzJpGw1D7JbK4+PvI4sT3e3XJ2QJSd8Kg=="
+        crossorigin="
+        " referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css"
+        href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap-extended.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/colors.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/src/css/booksPage.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <!---------------------- navbar----------------------------->
+
+        <nav class="navbar navbar-expand-lg navbar-light w-100 mb-5 position-fixed">
+
+            <div>
+                <span class="navLogo">Fairytellers</span>
+            </div>
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarCenteredExample" aria-controls="navbarCenteredExample" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </button>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse justify-content-center">
+                    <!-- Left links -->
+                    <ul class="navbar-nav mb-2 mb-lg-0" id="navbarItems">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Disabled</a>
+                        </li>
+                    </ul>
+                    <!-- Left links -->
+                </div>
+                <!-- Collapsible wrapper -->
+
+                <div>
+                    <a href="./src/html/login.html" class="mr-2 logIn nav-link">log in</a>
+                </div>
+
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        <!---------------------- navbar end------------------------------>
+
+    </header>
+
+
+    <main>
+
+
+
+        <!------------------------------- recommendation Section------------------------------- -->
+        <section id="recommended">
+            <div class="container pt-5 booksContainer ">
+                <!-- serch filter -->
+                <div class="row searchFilter mt-5">
+                    <div class="col-sm-12">
+                        <div class="input-group">
+                            <input id="table_filter" type="text" class="form-control"
+                                aria-label="Text input with segmented button dropdown">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn  dropdown-toggle dropdown-toggle-split"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span
+                                        class="label-icon">Category</span> <span class="caret">&nbsp;</span></button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <ul class="category_filters">
+                                        <li>
+                                            <span>ALL</span>
+                                        </li>
+                                        <li>
+                                            <span>Classics</span>
+                                        </li>
+                                        <li>
+                                            <span>Fantasy</span>
+                                        </li>
+                                        <li>
+                                            <span>Adventure</span>
+                                        </li>
+                                        <li>
+                                            <span>Crime</span>
+                                        </li>
+                                        <li>
+                                            <span>memoir</span>
+                                        </li>
+                                        <li>
+                                            <span>Detective and Mystery</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <button id="searchBtn" type="button" class="btn btn-search"><span
+                                        class="glyphicon glyphicon-search">&nbsp;</span> <span
+                                        class="label-icon">Search</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end of searh filter -->
+                <div class="row mt-5 ">
+                    <div class="col-12 text-center mb-3">
+                    </div>
+                </div>
+
+                <div class="row ">
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+                        <div class="card booksCard">
+                            <img src="/img/book1.jpg" alt="first book" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+                        <div class="card booksCard">
+                            <img src="/img/book2.jpg" alt="second book" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+                        <div class="card booksCard">
+                            <img src="/img/book3.jpg" alt="third book" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row  ">
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+                        <div class="card booksCard">
+                            <img src="/img/book1.jpg" alt="first book" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+                        <div class="card booksCard d-flex align-items-center">
+                            <img src="/img/book2.jpg" alt="second book" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+                        <div class="card booksCard d-flex align-items-center">
+                            <img src="/img/book3.jpg" alt="third book" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+                        <div class="card booksCard d-flex align-items-center">
+                            <img src="/img/book1.jpg" alt="first book" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+                        <div class="card booksCard d-flex align-items-center">
+                            <img src="/img/book2.jpg" alt="second book" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+                        <div class="card booksCard d-flex align-items-center">
+                            <img src="/img/book3.jpg" alt="third book" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <button class="cta">
+                            <span>Next Page</span>
+                            <svg viewBox="0 0 13 10" height="10px" width="15px">
+                                <path d="M1,5 L11,5"></path>
+                                <polyline points="8 1 12 5 8 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+
+    </main>
+
+
+    <section id="footerSection">
+
+        <footer class="py-3 my-4 footer sticky-footer">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+            </ul>
+            <p class="text-center text-muted">© 2023 fairytellers</p>
+        </footer>
+
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/src/js/app.js"></script>
+
+
+</body>
+
+</html>

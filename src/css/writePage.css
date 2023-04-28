@@ -1,9 +1,374 @@
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+
+}
+.navbar {
+  background-color: #7c2d9940;
+  z-index: 4;
+  color: #e2d9d9;
+
+}
+
+
+.navLogo {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #491467;
+  font-weight: 600;
+}
+
+.nav-link {
+  display: inline-block;
+  position: relative;
+  color: #9900EF;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #9900EF;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.nav-lang-icon {
+  text-decoration: none;
+}
+
+.logIn {
+  text-decoration: none;
+  color: #514f4f;
+}
+
+.logIn:link {
+  text-decoration: none;
+}
+
+.logIn:visited {
+  text-decoration: none;
+}
+
+.logIn:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.logIn:active {
+  text-decoration: none;
+}
+
 .frame {
 
-    border-radius: 2px;
-    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    background: linear-gradient(to top right, darkmagenta 0%, rgb(180, 105, 255) 100%);
-    color: #333;
-    font-family: "Open Sans", Helvetica, sans-serif;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: linear-gradient(to top right, darkmagenta 0%, rgb(180, 105, 255) 100%);
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
 }
+
+.formTitle {
+  text-decoration: underline #9900EF;
+  text-underline-offset: 1rem;
+
+}
+
+#hidden-section {
+  /* display: none; */
+  /* visibility: hidden; */
+  background-color: rgb(218, 149, 246);
+}
+
+
+
+.uploudImgDiv {
+  background-color: rgb(233, 233, 233);
+
+}
+
+.file-upload {
+  background-color: #ffffff;
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.file-upload-btn {
+  color: #fff;
+  background-color: rgb(218, 149, 246);
+  border: none;
+  border-radius: 4px;
+  transition: all .2s ease;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.file-upload-btn:hover {
+  background: rgb(204, 143, 228);
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.image-upload-wrap {
+  margin-top: 20px;
+  border: 4px dashed rgb(218, 149, 246);
+  position: relative;
+  transition: 0.3s;
+
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+  background-color: rgba(197, 130, 223, 0.19);
+  border: 4px dashed rgb(168, 110, 191);
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #222;
+}
+
+.drag-text {
+  text-align: center;
+}
+
+.drag-text p {
+  color: #371351;
+  padding: 60px 0;
+}
+
+.file-upload-image {
+  max-height: 200px;
+  max-width: 200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.remove-image {
+  width: 200px;
+  margin: 0;
+  color: #282727;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border: 2px solid #b02818;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.remove-image:hover {
+  border: 3px solid rgb(194, 54, 54);
+
+  color: #282727;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.col-form-label {
+  margin-top: 1rem;
+}
+
+.fancy {
+  background-color: transparent;
+  border: 2px solid #7c2d99;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  outline: none;
+  overflow: visible;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-size: 13px;
+}
+
+.fancy::before {
+  content: " ";
+  width: 1.5625rem;
+  height: 2px;
+  background: rgb(203, 160, 210);
+  left: 1.5em;
+  position: absolute;
+  transform: translateY(-50%);
+  transform-origin: center;
+  transition: background 0.3s linear, width 0.3s linear;
+}
+
+.fancy .text {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  padding-left: 2em;
+  display: block;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+.fancy .top-key {
+  height: 2px;
+  width: 1.5625rem;
+  top: -2px;
+  left: 0.625rem;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+  height: 2px;
+  width: 1.5625rem;
+  right: 1.875rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+  height: 2px;
+  width: 0.625rem;
+  right: 0.625rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+  color: white;
+  background: rgb(91, 34, 137);
+}
+
+.fancy:hover::before {
+  width: 0.9375rem;
+  background: white;
+}
+
+.fancy:hover .text {
+  color: white;
+  padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+  left: -2px;
+  width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+.fancy:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
+}
+
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.custom-shape-divider-top-1682683435 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1682683435 svg {
+  position: relative;
+  display: block;
+  width: calc(119% + 1.3px);
+  height: 118px;
+}
+
+.custom-shape-divider-top-1682683435 .shape-fill {
+  fill: #FFFFFF;
+}
+
+/* .writeAreaBtn{
+  color: #ffff;
+} */
+.writeAreaBtn {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+  font-size: 18px;
+  background-color: rgba(13, 13, 13, 0.3);
+  padding: 0.4em 1.2em;
+  border-style: dashed;
+  border-radius: 0.25em;
+  border-width: 2px;
+  border-color: rgba(13, 13, 13, 0.429);
+  transition: 0.2s ease;
+}
+
+.writeAreaBtn:hover {
+  background-color: rgba(50, 46, 46, 0.389);
+  color: #ffffff;
+  border-color: #401851;
+}
+
+#myTextarea {
+  -webkit-transition: height 0.2s;
+  -moz-transition: height 0.2s;
+  transition: height 0.2s;
+
+  border-radius: 10px;
+  border: 4px solid rgb(218, 149, 246);
+}
+

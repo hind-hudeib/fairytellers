@@ -1,10 +1,32 @@
-const form = document.getElementById("signupForm");
+
+// populate day select
+let daySelect = document.getElementById("day");
+for (let i = 1; i <= 31; i++) {
+  let option = document.createElement("option");
+  option.text = i;
+  option.value = i;
+  daySelect.add(option);
+}
+
+// populate month select
+let monthSelect = document.getElementById("month");
+let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+for (let i = 0; i < months.length; i++) {
+  let option = document.createElement("option");
+  option.text = months[i];
+  option.value = i + 1;
+  monthSelect.add(option);
+}
+// ---------------------------------
+
+
+const form = document.getElementById("form");
 let nameError = document.getElementById("nameError");
 let emailError = document.getElementById("emailError");
 let passwordError = document.getElementById("passwordError");
-let positionError = document.getElementById("positionError");
-let checkboxError = document.getElementById("checkboxError");
 let passwordConfirmError = document.getElementById("passwordConfirmError");
+let checkboxError = document.getElementById("checkboxError");
+
 let selectedValue;
 let loggedInUser;
 let valid = true;
@@ -27,7 +49,7 @@ form.addEventListener("submit", function (e) {
     nameError.style.display = "none";
   }
 
-  const password = e.target.password.value;
+  const password = e.target.newPassword.value;
   const passwordRegex =
     /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/;
   if (!passwordRegex.test(password)) {
@@ -60,6 +82,7 @@ form.addEventListener("submit", function (e) {
     }
   });
 
+  let checked;
   const checkbox = e.target.checkbox.checked;
   if (checkbox === true) {
     checked = "checked";
@@ -70,38 +93,28 @@ form.addEventListener("submit", function (e) {
     valid = false;
   }
 
-  if (selectedValue == null) {
-    positionError.style.display = "block";
-    valid = false;
-  } else {
-    positionError.style.display = "none";
-  }
 
   if (valid && !exists) {
-    let usersInfo = new object(name, password, email, selectedValue);
+    let usersInfo = new Object(name, password, email);
     users.push(usersInfo);
     localStorage.setItem("users", JSON.stringify(users));
 
     sessionStorage.setItem("loggedInUser", JSON.stringify(usersInfo));
 
-    window.location.href = "../welcome/welcomePage.html";
+    window.location.href = "/src/html/registerPage.html";
+
   } else if (valid && exists) {
-    Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "User Already exists",
-    });
-    exists = false;
+    
+    alert("User already exists !")
   }
 
   form.reset();
 });
 
-class object {
-  constructor(name, password, email, selectedValue) {
+class Object {
+  constructor(name, password, email) {
     this.name = name;
     this.password = password;
     this.email = email;
-    this.selectedValue = selectedValue;
   }
 }
