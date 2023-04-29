@@ -20,17 +20,6 @@ toggleBtn.addEventListener('click', function () {
   hiddenSection.style.visibility = 'visible';
 });
 
-// let loadFile = function(event) {
-//   let image = document.getElementById('output');
-//   image.src = URL.createObjectURL(event.target.files[0]);
-// };
-
-
-// $(document).ready(function(){
-//   $('.imgInput').change(function () {
-//     $('.UploudImgText').text(this.files.length + " file(s) selected");
-//   });
-// });
 function readURL(input) {
   if (input.files && input.files[0]) {
 

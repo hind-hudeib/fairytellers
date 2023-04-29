@@ -1,0 +1,85 @@
+body {
+    background-color: white;
+    font-family: 'Noto Sans JP', sans-serif;
+
+}
+
+.navbar {
+    background-color: #7c2d9940;
+    z-index: 4;
+    color: #e2d9d9;
+
+}
+
+
+.navLogo {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #491467;
+    font-weight: 600;
+}
+
+.nav-link {
+    display: inline-block;
+    position: relative;
+    color: #9900EF;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #9900EF;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nav-lang-icon {
+    text-decoration: none;
+}
+
+.logIn {
+    text-decoration: none;
+    color: #514f4f;
+}
+
+.logIn:link {
+    text-decoration: none;
+}
+
+.logIn:visited {
+    text-decoration: none;
+}
+
+.logIn:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+.logIn:active {
+    text-decoration: none;
+}
+
+.story-container {
+    margin-bottom: 10rem;
+    margin-top: 10rem;
+    background-color: white;
+    border-radius: 3rem;
+}
+
+#userWorkSection {
+    background-color: #d895ff;
+
+}
+
