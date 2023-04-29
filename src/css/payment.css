@@ -12,94 +12,173 @@ body {
     font-family: 'Noto Sans JP', sans-serif;
 
 }
-/*Card containing 2 cards*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
 
-/*Left Side card*/
+.navbar {
+    background-color: #7c2d9940;
+    z-index: 4;
+    color: #e2d9d9;
 
-
-.line {
-	border-right: 1px grey solid;
 }
 
-.bill-date {
-	color: #BDBDBD;
+
+.navLogo {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #491467;
+    font-weight: 600;
 }
 
-#heading2 {
-	font-size: 27px;
-	color: #bc00d5;
-}
-
-/*For font-awesome icons in Placeholder*/
-.placeicon {
-	font-family: fontawesome !important;
-}
-
-/*Right Side Card*/
-
-
-.form-card .pay {
-	font-weight: bold;
-}
-
-.form-card input, .form-card textarea {
-    padding: 10px 8px 10px 8px;
-    border: none;
-    border: 1px solid lightgrey;
-    border-radius: 0px;
-    margin-bottom: 25px;
-    margin-top: 2px;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: montserrat;
-    color: #2C3E50;
-    font-size: 14px;
-    letter-spacing: 1px;
-}
-
-.form-card input:focus, .form-card textarea:focus {
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    border: none;
-    font-weight: bold;
-    border: 1px solid gray;
-    outline-width: 0;
-}
-
-.btn-info {
-	color: #ffffff !important;
-}
-
-/*Imaged Radio Buttons*/
-.radio-group {
+.nav-link {
+    display: inline-block;
     position: relative;
-    margin-bottom: 25px;
+    color: #9900EF;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
-.radio {
-    display:inline-block;
-    width: 204;
-    height: 64;
-    border-radius: 0;
-    background: lightblue;
-    box-sizing: border-box;
-    border: 2px solid lightgrey;
-    cursor:pointer;
-    margin: 8px 25px 8px 0px; 
-}
 
-.radio:hover {
-    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
-}
 
-.radio.selected {
-    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.4);
-}
-
-/*Fit image in bootstrap div*/
-.fit-image{
+.nav-link::after {
+    content: '';
+    position: absolute;
     width: 100%;
-    object-fit: cover;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #9900EF;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nav-lang-icon {
+    text-decoration: none;
+}
+
+.logIn {
+    text-decoration: none;
+    color: #514f4f;
+}
+
+.logIn:link {
+    text-decoration: none;
+}
+
+.logIn:visited {
+    text-decoration: none;
+}
+
+.logIn:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+.logIn:active {
+    text-decoration: none;
+}
+
+
+
+/* ---------------------------------- */
+
+
+.card {
+    background-color: rgb(253, 253, 253);
+    color: #2c0b32;
+    border: none;
+}
+
+h1{
+    color: #d895ff;
+    font-size: 6rem;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+
+}
+.btn-link {
+    color: #44006b;
+}
+
+.login-btn {
+    font-family: 'Noto Sans JP', sans-serif;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .4s;
+}
+
+.login-btn span:last-child {
+    display: none;
+}
+
+.login-btn:hover {
+    border: 2px dashed #9900EF;
+    background-color: #fff;
+    color: #9900EF;
+    transition: .4s;
+
+}
+
+.login-btn:active {
+    background-color: #9900EF;
+}
+
+:root {
+    --background: #d895ff;
+    --primary: #d386ff;
+    --secondary: #c789eb;
+    --third: #c281e8;
+}
+
+
+
+#radius-shape-1 {
+    height: 220px;
+    width: 220px;
+    top: -60px;
+    left: -130px;
+    background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    height: 400px;
+    width: 400px;
+    z-index: -2;
+}
+
+#radius-shape-2 {
+    border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+    bottom: -60px;
+    right: -110px;
+    width: 300px;
+    background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+    animation: morph 4s ease-in-out infinite;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    height: 400px;
+    transition: all 1s ease-in-out;
+    width: 400px;
+    z-index: -2;
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        background: linear-gradient(45deg, var(--third) 0%, var(--secondary) 100%);
+    }
+
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+    }
+}
+
+
+p a{
+    color: #7d1aa4;
 }

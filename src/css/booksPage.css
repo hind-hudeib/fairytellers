@@ -115,7 +115,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 25px;
+    font-size: 1rem;
     font-weight: bold;
     background-color: rgb(202, 149, 235);
     transition: all 0.5s;
@@ -142,7 +142,9 @@ body {
 }
 
 .booksCard:hover:after {
-    content: "book title";
+    content: "book title" 
+    "Author Name"
+    "story type";
 }
 
 

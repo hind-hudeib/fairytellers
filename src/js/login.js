@@ -1,12 +1,8 @@
 const form = document.getElementById("form");
-let positionError = document.getElementById("positionError");
-let emailpassError = document.getElementById("emailPassError");
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
 
 let users = [];
-let valid = false;
-let emailExists = false;
-let passwordExists = false;
-
 
 if (localStorage.getItem("users")) {
   users = JSON.parse(localStorage.getItem("users"));
@@ -17,24 +13,19 @@ form.addEventListener("submit", function (e) {
 
   const email = e.target.email.value;
   const password = e.target.password.value;
-  let username;
+  let valid = false;
 
-  users.forEach((element) => {
-    if (element.email == email && element.password == password) {
-      username = element.name;
+  users.forEach((user) => {
+    if (user.email === email && user.password === password) {
       valid = true;
-    } else if (element.email == email && element.password != password) {
-      emailExists = true;
+      sessionStorage.setItem("loggedInUser", JSON.stringify(usersInfo));
+      window.location.href = "/src/html/registerPage.html";
     }
-    console.log(email, element.email, password, element.password);
-    console.log(valid);
   });
- 
-  if (valid && emailExists) {
-    window.location.href = "/src/html/registerPage.html";
+
+  if (!valid) {
+    alert("Invalid email or password");
   }
-  else if (!valid && emailExists) {
-    emailpassError.style.display = "block";
-  }
+
   form.reset();
 });
