@@ -1,8 +1,8 @@
 const form = document.getElementById("form");
-const emailInput = document.getElementById("email");
-const passwordInput = document.getElementById("password");
+const emailPassError = document.getElementById("emailPassError");
 
 let users = [];
+let valid = false;
 
 if (localStorage.getItem("users")) {
   users = JSON.parse(localStorage.getItem("users"));
@@ -13,18 +13,21 @@ form.addEventListener("submit", function (e) {
 
   const email = e.target.email.value;
   const password = e.target.password.value;
-  let valid = false;
+
+  let username;
 
   users.forEach((user) => {
     if (user.email === email && user.password === password) {
+      username = user.name;
       valid = true;
-      sessionStorage.setItem("loggedInUser", JSON.stringify(usersInfo));
-      window.location.href = "/src/html/registerPage.html";
     }
   });
 
   if (!valid) {
-    alert("Invalid email or password");
+    emailPassError.style.display = "block";
+  } else {
+    sessionStorage.setItem("loggedInUser", JSON.stringify({ name: username, email }));
+    window.location.href = "/src/html/registerPage.html";
   }
 
   form.reset();

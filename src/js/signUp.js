@@ -20,7 +20,7 @@ for (let i = 0; i < months.length; i++) {
 // ---------------------------------
 
 
-const form = document.getElementById("form");
+let form = document.getElementById("form");
 let nameError = document.getElementById("nameError");
 let emailError = document.getElementById("emailError");
 let passwordError = document.getElementById("passwordError");
@@ -49,7 +49,7 @@ form.addEventListener("submit", function (e) {
     nameError.style.display = "none";
   }
 
-  const password = e.target.newPassword.value;
+  const password = e.target.password.value;
   const passwordRegex =
     /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/;
   if (!passwordRegex.test(password)) {
