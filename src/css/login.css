@@ -5,6 +5,15 @@ body {
 
 }
 
+i {
+    font-size: 1rem;
+    color: #542679;
+}
+
+i:hover {
+    color: #3c1b57;
+
+}
 .card {
     background-color: rgb(253, 253, 253);
     color: #2c0b32;
